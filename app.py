@@ -11,3 +11,11 @@ print t
 
 print "preason coeff"
 print q
+
+
+scores = topMatches(critics, 'Toby', n=3)
+print scores
+
+
+recommendation = getRecommendations(critics,'Toby')
+print recommendation
