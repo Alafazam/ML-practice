@@ -31,3 +31,7 @@ print ""
 scores2 = topMatches(movies,'Superman Returns')
 print scores2
 print ""
+
+
+itemsim=calculateSimilarItems(critic)
+print itemsim
