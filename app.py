@@ -23,13 +23,14 @@ print ""
 
 
 movies = transformPrefs(critics)
-print "movies:", movies
-print ""
+# print "movies:", movies
+# print ""
 
 
 scores2 = topMatches(movies,'Superman Returns')
-print scores2
+print "TopMatches in movies of 'Superman Returns' ", scores2
+print ""
 
 
-# itemsim=calculateSimilarItems(critics)
-# print itemsim
+itemsim = calculateSimilarItems(critics)
+print "SimilarItems: ", itemsim
