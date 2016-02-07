@@ -1,7 +1,13 @@
 from math import sqrt
+import os, datetime
+import time,json
+
+_basedir = os.path.abspath(os.path.dirname(__file__))
+
+
+
 
 # Returns a distance - based similarity score for person1 and person2
-
 def sim_distance(prefs, person1, person2): 
 	#Get the list of shared_items
 	si = {}
@@ -19,8 +25,6 @@ def sim_distance(prefs, person1, person2):
 
 
 # Returns the Pearson correlation coefficient for p1 and p2
-
-
 def sim_pearson(prefs,p1,p2):
 	# Get the list of mutually rated items
 	si={}
@@ -154,3 +158,25 @@ def getRecommendedItems(prefs,itemMatch,user):
 	rankings.sort( )
 	rankings.reverse( )
 	return rankings
+
+
+
+
+def loadMovieLens(path='/dataset/ml-100k'):
+	
+	# Get movie titles
+	movies={}
+	
+	for line in open(_basedir + path+'/u.item'):
+		(id,title)=line.split('|')[0:2]
+		movies[id]=title
+	
+	# Load data
+	prefs={}
+	
+	for line in open(_basedir + path+'/u.data'):
+		(user,movieid,rating,ts)=line.split('\t')
+		prefs.setdefault(user,{})
+		prefs[user][movies[movieid]]=float(rating)
+	
+	return prefs
