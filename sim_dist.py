@@ -66,6 +66,9 @@ def topMatches(prefs,person,n=5,similarity=sim_pearson):
 	return scores[0:n]
 
 
+
+
+
 # Gets recommendations for a person by using a weighted average
 # of every other user's rankings
 def getRecommendations(prefs,person,similarity=sim_pearson):
