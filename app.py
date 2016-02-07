@@ -31,6 +31,13 @@ scores2 = topMatches(movies,'Superman Returns')
 print "TopMatches in movies of 'Superman Returns' ", scores2
 print ""
 
-
+#similarity list
 itemsim = calculateSimilarItems(critics)
 print "SimilarItems: ", itemsim
+
+
+
+# see what user likes, take each items similarity list 
+#  	 to get most similar unrated item
+recom = getRecommendedItems(critics, itemsim, 'Toby')
+print "RecommendedItems", recom
