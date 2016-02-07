@@ -33,5 +33,5 @@ print scores2
 print ""
 
 
-itemsim=calculateSimilarItems(critic)
+itemsim=calculateSimilarItems(critics)
 print itemsim
