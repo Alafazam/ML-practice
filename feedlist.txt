@@ -14,7 +14,6 @@ http://feeds.feedburner.com/hotair/main
 http://jeremy.zawodny.com/blog/rss2.xml
 http://joi.ito.com/index.rdf
 http://feeds.feedburner.com/Mashable
-http://michellemalkin.com/index.rdf
 http://moblogsmoproblems.blogspot.com/rss.xml
 http://newsbusters.org/node/feed
 http://beta.blogger.com/feeds/27154654/posts/full?alt=rss
@@ -38,9 +37,7 @@ http://feeds.copyblogger.com/Copyblogger
 http://feeds.feedburner.com/crooksandliars/YaCP
 http://feeds.dailykos.com/dailykos/index.xml
 http://www.deadspin.com/index.xml
-http://www.downloadsquad.com/rss.xml
 http://www.engadget.com/rss.xml
-http://www.gapingvoid.com/index.rdf
 http://www.gawker.com/index.xml
 http://www.gothamist.com/index.rdf
 http://www.huffingtonpost.com/raw_feed_index.rdf
@@ -50,7 +47,6 @@ http://www.kotaku.com/index.xml
 http://feeds.kottke.org/main
 http://www.lifehack.org/feed/
 http://www.lifehacker.com/index.xml
-http://littlegreenfootballs.com/weblog/lgf-rss.php
 http://www.mattcutts.com/blog/feed/
 http://xml.metafilter.com/rss.xml
 http://www.mezzoblue.com/rss/index.xml
