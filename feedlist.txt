@@ -13,7 +13,6 @@ http://headrush.typepad.com/creating_passionate_users/index.rdf
 http://feeds.feedburner.com/hotair/main
 http://jeremy.zawodny.com/blog/rss2.xml
 http://joi.ito.com/index.rdf
-http://journals.aol.com/thecoolerblog/AOLNewsCooler/rss.xml
 http://feeds.feedburner.com/Mashable
 http://michellemalkin.com/index.rdf
 http://moblogsmoproblems.blogspot.com/rss.xml
