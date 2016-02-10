@@ -5,3 +5,4 @@ class bicluster:
 		self.vec = vec
 		self.id = id
 		self.distance = distance
+	

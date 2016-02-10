@@ -44,8 +44,9 @@ def hcluster(rows, distance = pearson):
 					lowestpair = (i,j)
 		# calulate the average of two clusters
 
-		mergevec =  [ (clust[lowestpair[0]].vec[i] + clust[lowestpair[1]].vec[i])/2.0 for i in range(len(clust[0].vec))]
-
+		mergevec =  [ (clust[lowestpair[0]].vec[i] + clust[lowestpair[1]].vec[i])/2.0 for i in range(len(clust[0].vec)) ]
+		print mergevec
+		
 		#create the new cluster
 		newcluster= bicluster(mergevec,left=clust[lowestpair[0]], right=clust[lowestpair[1]],distance=closest,id=currentclustid)
 
