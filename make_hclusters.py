@@ -4,14 +4,22 @@ from pearson_corelation2 import *
 
 blognames,words,data = readfile('blogdata.txt')
 
-# clust = hcluster(data)
 
-print len(data)
+# print len(data)
 
 
-clust = [bicluster(data[i],id=i) for i in range(len(data))]
+clust = hcluster(data)
+# clust = [bicluster(data[i],id=i) for i in range(len(data))]
 
-print  clust[0]
+# printClust(clust, labels=blognames)
+
+
+print "writeClust"
+
+
+
+writeClust(clust, labels=blognames)
+
 
 
 
