@@ -1,0 +1,217 @@
+http://feeds.feedburner.com/37signals/beMH
+Signal v. Noise — Medium
+
+http://feeds.feedburner.com/blogspot/bRuz
+Eschaton
+
+http://blog.guykawasaki.com/index.rdf
+Guy Kawasaki
+
+http://blog.outer-court.com/rss.xml
+Google Blogoscoped
+
+http://feeds.searchenginewatch.com/sewblog
+Search Engine Watch
+
+http://blog.topix.net/index.rdf
+Topix Blog
+
+http://feeds.feedburner.com/ConsumingExperienceFull
+A Consuming Experience (full feed)
+
+http://gizmodo.com/index.xml
+Gizmodo
+
+http://gofugyourself.typepad.com/go_fug_yourself/index.rdf
+Go Fug Yourself
+
+http://googleblog.blogspot.com/rss.xml
+Official Google Blog
+
+http://feeds.feedburner.com/GoogleOperatingSystem
+Google Operating System
+
+http://headrush.typepad.com/creating_passionate_users/index.rdf
+Creating Passionate Users
+
+http://feeds.feedburner.com/hotair/main
+Hot Air » Top Picks
+
+http://jeremy.zawodny.com/blog/rss2.xml
+Jeremy Zawodny's blog
+
+http://joi.ito.com/index.rdf
+Joi Ito's Web
+
+http://feeds.feedburner.com/Mashable
+Mashable
+
+http://moblogsmoproblems.blogspot.com/rss.xml
+The Viral Garden
+
+http://newsbusters.org/node/feed
+
+http://beta.blogger.com/feeds/27154654/posts/full?alt=rss
+Online Marketing Report
+
+http://feeds.feedburner.com/paulstamatiou
+PaulStamatiou.com - Technology, Design and Photography
+
+http://feeds.feedburner.com/Publishing20
+Publishing 2.0
+
+http://radar.oreilly.com/index.rdf
+O'Reilly Radar
+
+http://sethgodin.typepad.com/seths_blog/index.rdf
+Seth Godin's Blog on marketing, tribes and respect
+
+http://rss.slashdot.org/Slashdot/slashdot
+Slashdot
+
+http://thinkprogress.org/feed/
+ThinkProgress
+
+http://feeds.feedburner.com/andrewsullivan/rApM
+The Dish
+
+http://wilwheaton.typepad.com/wwdnbackup/index.rdf
+WIL WHEATON dot NET
+
+http://www.43folders.com/feed/
+43 Folders
+
+http://www.456bereastreet.com/feed.xml
+456 Berea Street
+
+http://www.autoblog.com/rss.xml
+Autoblog
+
+http://www.bloggersblog.com/rss.xml
+The Write News
+
+http://www.blogmaverick.com/rss.xml
+blog maverick
+
+http://www.boingboing.net/index.rdf
+Boing BoingBoing Boing
+
+http://www.buzzmachine.com/index.xml
+BuzzMachine
+
+http://www.captainsquartersblog.com/mt/index.rdf
+Captain's Quarters
+
+http://feeds.copyblogger.com/Copyblogger
+Copyblogger
+
+http://feeds.feedburner.com/crooksandliars/YaCP
+Latest from Crooks and Liars
+
+http://feeds.dailykos.com/dailykos/index.xml
+Daily Kos
+
+http://www.deadspin.com/index.xml
+Deadspin
+
+http://www.downloadsquad.com/rss.xml
+
+http://www.engadget.com/rss.xml
+Engadget RSS Feed
+
+http://www.gawker.com/index.xml
+Gawker
+
+http://www.gothamist.com/index.rdf
+Gothamist
+
+http://www.huffingtonpost.com/raw_feed_index.rdf
+The Huffington Post | The Full Feed
+
+http://www.hyperorg.com/blogger/index.rdf
+Joho the Blog
+
+http://www.joelonsoftware.com/rss.xml
+Joel on Software
+
+http://www.kotaku.com/index.xml
+Kotaku
+
+http://feeds.kottke.org/main
+kottke.org
+
+http://www.lifehack.org/feed/
+Lifehack
+
+http://www.lifehacker.com/index.xml
+Lifehacker
+
+http://www.mattcutts.com/blog/feed/
+Matt Cutts: Gadgets, Google, and SEO
+
+http://xml.metafilter.com/rss.xml
+MetaFilter
+
+http://www.mezzoblue.com/rss/index.xml
+mezzoblue
+
+http://www.neilgaiman.com/journal/feed/rss.xml
+Neil Gaiman's Journal
+
+http://www.oilman.ca/feed/
+Oilman
+
+http://www.perezhilton.com/index.xml
+PerezHilton
+
+http://www.plasticbag.org/index.rdf
+plasticbag.org
+
+http://www.powazek.com/rss.xml
+Derek Powazek
+
+http://www.problogger.net/feed/
+@ProBlogger
+
+http://feeds.feedburner.com/QuickOnlineTips
+Quick Online Tips
+
+http://www.readwriteweb.com/rss.xml
+ReadWrite
+
+http://www.schneier.com/blog/index.rdf
+Schneier on Security
+
+http://www.seroundtable.com/index.rdf
+Search Engine Roundtable
+
+http://www.shoemoney.com/feed/
+ShoeMoney
+
+http://feeds.feedburner.com/Spikedhumor
+SpikedHumor - Today's Videos and Pictures
+
+http://www.stevepavlina.com/blog/feed
+Steve Pavlina's Personal Development Blog
+
+http://www.tbray.org/ongoing/ongoing.rss
+ongoing by Tim Bray
+
+http://feeds.feedburner.com/TechCrunch
+TechCrunch
+
+http://www.techdirt.com/techdirt_rss.xml
+Techdirt.
+
+http://www.techeblog.com/index.php/feed/
+
+http://www.thesuperficial.com/index.xml
+
+http://www.tmz.com/rss.xml
+TMZ.com
+
+http://www.tuaw.com/rss.xml
+Engadget RSS Feed
+
+http://www.wired.com/rss/index.xml
+WIRED

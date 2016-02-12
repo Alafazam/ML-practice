@@ -55,18 +55,30 @@ for w,bc in apcount.items():
 	frac = float(bc)/50
 	if frac > 0.1 and frac < 0.5: wordlist.append(w)
 
+maxa = 0
 
-out = file('blogdata.txt','w')
-out.write("Blog")
-for word in wordlist: out.write('\t%s' % word)
+
+
+out = file('Ablogdata2.txt','w')
+out.write("Blog name")
+out.write('\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t');
+for word in wordlist: out.write('\t\t\t\t%s' % word)
 out.write('\n')
 for blog,wc in wordscount.items():
 	try:
+
 		out.write(blog)
+		out.write('\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t')
 		for word in wordlist:
 			if word in wc: 
-				out.write('\t%d' % wc[word])
-			else: out.write('\t0')
+				out.write('\t\t\t\t\t%d' % wc[word])
+				if wc[word] > maxa:
+					maxa = wc[word]
+			else: out.write('\t\t\t\t\t0')
 		out.write('\n')	 
 	except Exception, e:
 		print e
+
+
+
+print maxa
