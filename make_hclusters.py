@@ -16,4 +16,4 @@ rdata = rotatematrix(data)
 
 wordclust=hcluster(rdata)
 
-drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
+drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg'
