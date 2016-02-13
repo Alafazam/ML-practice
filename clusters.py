@@ -50,8 +50,17 @@ def hcluster(rows,distance=pearson):
 		del clust[lowestpair[0]]
 		clust.append(newcluster)
 
-
 	return clust[0]
+
+
+
+def rotatematrix(data):
+	newdata=[]
+	for i in range(len(data[0])):
+		newrow=[data[j][i] for j in range(len(data))]
+		newdata.append(newrow)
+	return newdata
+
 
 def printClust(clust, labels=None, n=0):
 	#indent to make hierarch layout

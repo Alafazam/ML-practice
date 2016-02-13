@@ -9,19 +9,11 @@ blognames,words,data = readfile('blogdata.txt')
 
 
 clust = hcluster(data)
-
-# # clust = [bicluster(data[i],id=i) for i in range(len(data))]
-
-# # printClust(clust, labels=blognames)
-
-
-# print "writeClust"
-
-
-
-# writeClust(clust, labels=blognames)
-
 drawdendrogram(clust,blognames,jpeg='blogclust.jpg')
 
 
+rdata = rotatematrix(data)
 
+wordclust=hcluster(rdata)
+
+drawdendrogram(wordclust,labels=words,jpeg='wordclust.jpg')
