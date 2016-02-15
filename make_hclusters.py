@@ -22,4 +22,7 @@ blognames,words,data = readfile('blogdata.txt')
 
 kclust = kcluster(data,k=10)
 
+results =  [[blognames[r] for r in kclust[x]] for x in range(len(kclust))]
+
+print results
 
