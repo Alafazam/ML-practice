@@ -16,7 +16,7 @@ user_profiles_dir = os.path.join(cwd,'crawled','users')
 files = os.listdir(user_profiles_dir)
 
 # print files
-files = files[:5]
+files = files[:2]
 
 for f in files:
 	read = open(os.path.join(user_profiles_dir,f),'r').read()
@@ -26,3 +26,19 @@ for f in files:
 	# 
 	name =  soup.find_all("div", class_= FULL_NAME_CLASS)[0].text
 	username = soup.find_all("div", class_= USERNAME_CLASS)[0].text
+	print username,name
+
+	cal = soup.find_all("svg", class_= 'js-calendar-graph-svg')
+	
+	if not len(cal)>0:
+		continue
+
+	days = soup.find_all("rect", class_= 'day')
+	contribution_data = []
+	for day in days:
+		d = (day['data-count'],day['data-date'])
+		contribution_data.append(d)
+	print len(contribution_data)	
+	print contribution_data[0]		
+	
+
