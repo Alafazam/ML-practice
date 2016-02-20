@@ -6,6 +6,19 @@ USERNAME_CLASS = "vcard-username"
 CONTRIBURIONS_COUNT_CLASS = "contrib-number"
 VCARD_STATS_CLASS = "vcard-stat-count"
 
+
+
+def thousand_check(args):
+	if 'k' in args:
+		args = args.replace('k', '')
+		return int(float(args)*1000)
+	elif ',' in args:
+		args = args.replace(',', '')
+		return int(args)
+	else:
+		return int(args)
+
+
 class Profile(object):
 	"""Github Profile"""
 	def __init__(self, soup):
@@ -16,12 +29,12 @@ class Profile(object):
 		vcard_stats = soup.find_all("strong", class_= VCARD_STATS_CLASS)
 		contribution_counts = soup.find_all("span", class_= CONTRIBURIONS_COUNT_CLASS)
 		
-		self.total_contributions =  contribution_counts[0].text.split(' ')[0]
-		self.longest_streak = contribution_counts[1].text.split(' ')[0]
-		self.current_streak = contribution_counts[2].text.split(' ')[0]
-		self.followers = vcard_stats[0].text
-		self.starred = vcard_stats[1].text
-		self.following = vcard_stats[2].text
+		self.total_contributions =  thousand_check(contribution_counts[0].text.split(' ')[0])
+		self.longest_streak = thousand_check(contribution_counts[1].text.split(' ')[0])
+		self.current_streak = thousand_check(contribution_counts[2].text.split(' ')[0])
+		self.followers = thousand_check(vcard_stats[0].text)
+		self.starred = thousand_check(vcard_stats[1].text)
+		self.following = thousand_check(vcard_stats[2].text)
 
 		self.get_contributions_data()
 
@@ -40,9 +53,9 @@ class Profile(object):
 		
 		self.contribution_data = cd
 	def __str__(self):
-		return "{ 'name': '%s', 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
-		%(self.name, self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)
+		return "{ 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
+		%(self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)
 	
 	def __repr__(self):
-		return "{ 'name': '%s', 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
-		%(self.name, self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)
+		return "{ 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
+		%(self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)

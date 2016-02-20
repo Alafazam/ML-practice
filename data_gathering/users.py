@@ -20,7 +20,8 @@ user_profiles_dir = os.path.join(cwd,'crawled','users')
 files = os.listdir(user_profiles_dir)
 
 # print files
-# files = files[:2]
+# files = files[99:121]
+
 users = []
 count = 0
 # shelfFile = shelve.open('users_shelf')
@@ -32,14 +33,22 @@ for f in files:
 	user = Profile(soup)
 	users.append(user)
 	count += 1
-	print "Profiles scanned %d, Last scanned %s" % (count, user.name)	
+	print "Profiles scanned %d, Last scanned %s has %s followers" % (count, user.name, user.followers)	
 
 # shelfFile['users'] = users
 # shelfFile.close()
 fileObj = open('user_data.py', 'w')
-fileObj.write('users = ' + pprint.pformat(users).encode('utf8') + '\n')
+fileObj.write('users = ' + pprint.pformat(users) + '\n')
 fileObj.close()
 print "all %d written" % count
 
+# out = file('githubprofiles.txt','w')
 
-dataset = []
+# out.write("id\t\ttotal_contributions\t\tlongest_streak\t\tcurrent_streak\t\tfollowers\t\tstarred\t\tfollowing\t\t\n")
+# count = 0
+# for user in users:
+# 	t = "%s 		%s						%s					%s					%s				%s			%s\n" \
+# 	%(count, user.total_contributions, user.longest_streak, user.current_streak, user.followers, user.starred, user.following)
+# 	out.write(t)
+# 	count += 1
+# out.close()
