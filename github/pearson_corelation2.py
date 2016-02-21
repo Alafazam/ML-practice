@@ -20,6 +20,8 @@ def pearson(v1,v2):
 	#pearson score r
 	num = pSum - (sum1*sum2/len(v1))
 	den = sqrt( (sumSq1-pow(sum1,2)/len(v1))*(sumSq2-pow(sum2,2)/len(v2)))
-	if den==0: return 0
+	if den == 0: return 0
 
 	return 1.0-num/den
+
+
