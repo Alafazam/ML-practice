@@ -1,5 +1,5 @@
-from pearson_corelation2 import *
 from cluster import *
+from pearson_corelation2 import *
 from PIL import Image,ImageDraw
 import random
 
@@ -160,7 +160,7 @@ def drawnode(draw,clust,x,y,scaling,labels):
 
 def kcluster(rows,distance=pearson,k=4):
 	# Determine the minimum and maximum values for each point
-	rows = rows[1:]
+	# rows = rows[1:]
 	ranges = [ (min([row[i] for row in rows]), max([row[i] for row in rows])) for i in range(len(rows[0]))]
 	# print 'ranges',ranges
 	# Create k randomly placed centroids
