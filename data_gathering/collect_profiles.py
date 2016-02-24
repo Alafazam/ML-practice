@@ -27,6 +27,9 @@ def collect_profiles(input_file,overwrite=False,log=logger,delay=2):
             raise
     os.chdir(output_dir)
 
+    count = 0 
+
+
     with open("../../"+input_file, 'r') as input_file:
         inputFile = json.load(input_file)
         total_count = inputFile['total_count'] 
@@ -52,11 +55,12 @@ def collect_profiles(input_file,overwrite=False,log=logger,delay=2):
         # If overwrite is enabled or the repo doesn't exist
         if overwrite or not os.path.isfile(filename):
             # Fetch the URL to find the repo
-            log('Downloading profile from URL %s' % profile_url)
+            log('[%d]/[%d]Downloading profile from URL %s' % (total_count-count,count,profile_url))
             try:
                 page_html = requests.get(profile_url, verify=False).content
                 with open(filename, 'wb') as f:
                     f.write(page_html)
+                count += 1
             except error:
                 print '[ERROR] Failed to download profile from URL %s (%s)' % (profile_url, error.reason)
                 continue
@@ -67,5 +71,6 @@ def collect_profiles(input_file,overwrite=False,log=logger,delay=2):
             time.sleep(delay)
         else:
             log('File : %s Already Exists. Skipping' % filename)
+            count += 1
 
     return downloaded
