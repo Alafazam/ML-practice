@@ -16,7 +16,7 @@ def rip_(k,s):
 	return [{'us': x['username'], s : x[s]} for x in k]
 
 
-def show_stats(users):	
+def show_stats(users):
 	# top 10 most followed users in github team.
 	top_f = sorted(users, key=lambda x: x['followers'], reverse=True)[:10]
 	print 'followers \n', pprint.pformat(rip_(top_f,'followers'))
@@ -48,7 +48,7 @@ def convert_to_row_cols(k):
 				cols.append(x[y])
 			else:
 				row.append(x[y])
-		rows.append(row)		
+		rows.append(row)
 	return rows,cols
 
 rows, cols = convert_to_row_cols(users)

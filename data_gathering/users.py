@@ -33,7 +33,7 @@ for f in files:
 	user = Profile(soup)
 	users.append(user)
 	count += 1
-	print "Profiles scanned %d, Last scanned %s has %s followers" % (count, user.name, user.followers)	
+	print "Profiles scanned %d, Last scanned %s has %s followers" % (count, user.name, user.followers)
 
 # shelfFile['users'] = users
 # shelfFile.close()

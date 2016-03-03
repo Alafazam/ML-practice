@@ -27,15 +27,15 @@ def collect_profiles(input_file,overwrite=False,log=logger,delay=2):
             raise
     os.chdir(output_dir)
 
-    count = 0 
+    count = 0
 
 
     with open("../../"+input_file, 'r') as input_file:
         inputFile = json.load(input_file)
-        total_count = inputFile['total_count'] 
+        total_count = inputFile['total_count']
         profiles = inputFile["items"]
 
-    profiles = profiles[:10] 
+    # profiles = profiles[:10]
 
     for p in profiles:
         profile_url = p['html_url']
@@ -44,11 +44,11 @@ def collect_profiles(input_file,overwrite=False,log=logger,delay=2):
 
         # Trim the filename if it's too long. 255 bytes is the limit on many filesystems.
         total_length = len(filename + '.html')
-        
+
         if len(filename + '.html') > 255:
             filename = filename[:(255 - len(filename + '.html'))]
             log('Filename was truncated to 255 characters.')
-        
+
         filename += '.html'
         log('Filename: %s' % filename)
 
