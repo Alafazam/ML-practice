@@ -3,6 +3,8 @@ from clusters import *
 from pearson_corelation2 import *
 
 from user_data import *
+from utils import *
+
 
 # def get_ints(k):
 # 	return { 'username': k['username'], 'total_contributions' : int(k['total_contributions']), 'longest_streak' : int(k['longest_streak']), 'current_streak' : int(k['current_streak']), 'followers' : int(k['followers']), 'starred' : int(k['starred']), 'following' : int(k['following'])}
@@ -60,5 +62,11 @@ rows, cols = convert_to_row_cols(users)
 
 # clust = hcluster(rows)
 # drawdendrogram(clust,cols,jpeg='randomK.jpg')
+# print len(users)
 
 
+print 'followers \n', mean(users,'followers',top=20)
+print 'total_contributions \n', mean(users,'total_contributions',top=20)
+print 'longest_streak \n', mean(users,'longest_streak',top=20)
+print 'current_streak \n', mean(users,'current_streak',top=20)
+print 'following \n', mean(users,'following',top=20)

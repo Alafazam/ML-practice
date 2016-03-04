@@ -13,7 +13,6 @@ def pearson(v1,v2):
 	minLen = len(v1)
 	if len(v2) < minLen:
 		minLen = len(v2)
-	
  	#sum of the products
 	pSum = sum([v1[i] * v2[i] for i in range(minLen)])
 
