@@ -10,11 +10,12 @@ def mean(seq,pro,sort=True,top=0):
 
 
 
-def median(seq,pro):
+def median(seq,pro,top=0):
+	if top == 0: top = len(seq)
 	med = 0
-	seq = sorted(seq, key=lambda x: x[pro], reverse=True)
-	mid = int(len(seq)/2)
+	seq = sorted(seq, key=lambda x: x[pro], reverse=True)[:top]
+	mid = int(top/2)
 	return seq[mid][pro]
 
 def mode(seq,pro):
-	pass
+	return 3*median(seq,pro) - 2*mean(seq,pro)

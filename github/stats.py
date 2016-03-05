@@ -65,8 +65,17 @@ rows, cols = convert_to_row_cols(users)
 # print len(users)
 
 
-print 'followers \n', mean(users,'followers',top=20)
-print 'total_contributions \n', mean(users,'total_contributions',top=20)
-print 'longest_streak \n', mean(users,'longest_streak',top=20)
-print 'current_streak \n', mean(users,'current_streak',top=20)
-print 'following \n', mean(users,'following',top=20)
+print 'mean followers :', mean(users,'followers',top=20)
+print 'mean total_contributions :', mean(users,'total_contributions',top=20)
+print 'mean longest_streak :', mean(users,'longest_streak',top=20)
+print 'mean current_streak :', mean(users,'current_streak',top=20)
+print 'mean following :', mean(users,'following',top=20)
+
+
+print 'median followers :', median(users,'followers',top=20)
+print 'median total_contributions :', median(users,'total_contributions',top=20)
+print 'median longest_streak :', median(users,'longest_streak',top=20)
+print 'median current_streak :', median(users,'current_streak',top=20)
+print 'median following :', median(users,'following',top=20)
+
+

@@ -28,7 +28,7 @@ class Profile(object):
 
 		vcard_stats = soup.find_all("strong", class_= VCARD_STATS_CLASS)
 		contribution_counts = soup.find_all("span", class_= CONTRIBURIONS_COUNT_CLASS)
-		
+
 		self.total_contributions =  thousand_check(contribution_counts[0].text.split(' ')[0])
 		self.longest_streak = thousand_check(contribution_counts[1].text.split(' ')[0])
 		self.current_streak = thousand_check(contribution_counts[2].text.split(' ')[0])
