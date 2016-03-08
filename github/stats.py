@@ -64,18 +64,18 @@ rows, cols = convert_to_row_cols(users)
 # drawdendrogram(clust,cols,jpeg='randomK.jpg')
 # print len(users)
 
+def show_mean():
+	print 'mean followers :', mean(users,'followers',top=20)
+	print 'mean total_contributions :', mean(users,'total_contributions',top=20)
+	print 'mean longest_streak :', mean(users,'longest_streak',top=20)
+	print 'mean current_streak :', mean(users,'current_streak',top=20)
+	print 'mean following :', mean(users,'following',top=20)
 
-print 'mean followers :', mean(users,'followers',top=20)
-print 'mean total_contributions :', mean(users,'total_contributions',top=20)
-print 'mean longest_streak :', mean(users,'longest_streak',top=20)
-print 'mean current_streak :', mean(users,'current_streak',top=20)
-print 'mean following :', mean(users,'following',top=20)
-
-
-print 'median followers :', median(users,'followers',top=20)
-print 'median total_contributions :', median(users,'total_contributions',top=20)
-print 'median longest_streak :', median(users,'longest_streak',top=20)
-print 'median current_streak :', median(users,'current_streak',top=20)
-print 'median following :', median(users,'following',top=20)
+def show_median():
+	print 'median followers :', median(users,'followers',top=20)
+	print 'median total_contributions :', median(users,'total_contributions',top=20)
+	print 'median longest_streak :', median(users,'longest_streak',top=20)
+	print 'median current_streak :', median(users,'current_streak',top=20)
+	print 'median following :', median(users,'following',top=20)
 
 
