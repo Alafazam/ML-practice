@@ -26,10 +26,10 @@ m = mean(users,'followers')
 # y = [(x+0.0)/m for x in y]
 y = np.array(y)
 
-x = np.random.normal(size=20)
+# x = np.random.normal(size=20)
 # print 'x = '+ str(x)
 # print 'y = '+ str(y)
-graph = sns.distplot(y);
+graph = sns.distplot(bins=y);
 
 
 # sns.plt.savefig(__main__.__file__+".png")
