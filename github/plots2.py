@@ -9,8 +9,8 @@ def convert(k):
 	for x in k:
 		y = []
 		y.append(x["followers"])
-		y.append(x["total_contributions"])
-		y.append(x["longest_streak"])
+		y.append(x["following"])
+		# y.append(x["longest_streak"])
 		array.append(y)
 	return array
 
@@ -31,12 +31,21 @@ def convert(k):
 # y = ripu_(users,'followers')
 # m = mean(users,'followers')
 # y = [(x+0.0)/m for x in y]
-y = convert(users[:20])
-y = np.array(y)
+# y = convert(users)
+# y = np.array(y)
 
 # print y
 
-df2 = pd.DataFrame(y, columns=['followers', 'total_contributions', 'longest_streak'])
-df2.plot(kind='bar');
-plt.show()
+# df2 = pd.DataFrame(y, columns=['followers', 'total_contributions', 'longest_streak'])
+# df2.plot(kind='bar');
+# plt.show()
 
+
+# top_f = sorted(users, key=lambda x: x['followers'], reverse=True)[:10]
+print top_f
+y = convert(top_f)
+y = np.array(y)
+
+df3 = pd.DataFrame(y, columns=['followers', 'following'])
+df3.plot(kind='bar');
+plt.show()
