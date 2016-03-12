@@ -50,12 +50,12 @@ class Profile(object):
 		for day in days:
 			d = (day['data-count'],day['data-date'])
 			cd.append(d)
-		
+
 		self.contribution_data = cd
 	def __str__(self):
-		return "{ 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
+		return "{ 'username': '%s', 'total_contributions' : %s, 'longest_streak' : %s, 'current_streak' : %s, 'followers' : %s, 'starred' : %s, 'following' : %s}" \
 		%(self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)
-	
+
 	def __repr__(self):
-		return "{ 'username': '%s', 'total_contributions' : '%s', 'longest_streak' : '%s', 'current_streak' : '%s', 'followers' : '%s', 'starred' : '%s', 'following' : '%s'}" \
+		return "{ 'username': '%s', 'total_contributions' : %s, 'longest_streak' : %s, 'current_streak' : %s, 'followers' : %s, 'starred' : %s, 'following' : %s}" \
 		%(self.username, self.total_contributions, self.longest_streak, self.current_streak, self.followers, self.starred, self.following)

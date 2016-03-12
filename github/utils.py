@@ -17,5 +17,5 @@ def median(seq,pro,top=0):
 	mid = int(top/2)
 	return seq[mid][pro]
 
-def mode(seq,pro):
-	return 3*median(seq,pro) - 2*mean(seq,pro)
+def mode(seq,pro,top=0):
+	return 3*median(seq,pro,top) - 2*mean(seq,pro,top)

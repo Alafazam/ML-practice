@@ -178,7 +178,7 @@ def kcluster(rows,distance=pearson,k=4):
 				if d < distance(clusters[bestmatch],row): bestmatch = i
 			bestmatches[bestmatch].append(j)
 			# If the results are the same as last time, this is complete
-		if bestmatches == lastmatches: break			
+		if bestmatches == lastmatches: break
 		lastmatches = bestmatches
 		#Move the centroids to the average of their members
 		for i in range(k):
