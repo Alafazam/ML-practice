@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 from stats import *
 
 
-
-
-
-
 def convert(k):
 	array = []
 	for x in k:
