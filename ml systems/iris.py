@@ -14,7 +14,7 @@ feature_names = data.feature_names
 target = data.target
 target_names = data.target_names
 
-# plt.xkcd()
+plt.xkcd()
 # print plt.get_plot_commands()
 plt.figure(figsize=(14,10))
 
@@ -119,5 +119,5 @@ plt.xlabel(feature_names[2])
 plt.ylabel(feature_names[3])
 plt.autoscale(tight=True)
 
-plt.savefig(__main__.__file__+"_plot.png")
-plt.show()
+plt.savefig(__main__.__file__+"_plot_xkcd.png")
+# plt.show()
