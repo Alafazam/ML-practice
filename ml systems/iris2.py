@@ -87,12 +87,20 @@ for e in range(0,5000):
 
 
 	answer =  np.array(result)
-	# print test_target
-
 	final_result = (answer == test_target)
-	# print final_result
-	# print final_result.mean()
-	observations.append(final_result.mean())
 
+	print test_target
+	print answer
+	print final_result
+	print final_result.mean()
+	print " "
+	observations.append(final_result.mean()*100)
 
-print np.array(observations).mean()*100
+observations = np.array(observations)
+# print observations.max()
+# print observations.min()
+# print observations.mean()
+
+print('Maximum accuracy: {0}.'.format(observations.max()))
+print('Minimum accuracy: {0}.'.format(observations.min()))
+print('Mean accuracy: {0}.'.format(observations.mean()))
