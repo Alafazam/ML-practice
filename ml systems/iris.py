@@ -17,9 +17,11 @@ target_names = data.target_names
 # plt.xkcd()
 # print plt.get_plot_commands()
 plt.figure(figsize=(16,9))
+plt.autoscale(tight=True)
 
 # subplot 1
 plt.subplot(231)
+# plt.minorticks_on()
 for t in range(3):
 	if t == 0:
 		c = 'r'
@@ -117,7 +119,5 @@ for t in range(3):
 	plt.scatter(features[target == t,2], features[target == t,3], marker=marker, c=c)
 plt.xlabel(feature_names[2])
 plt.ylabel(feature_names[3])
-plt.autoscale(tight=True)
-
-plt.savefig(__main__.__file__+"_plot.png")
+# plt.savefig(__main__.__file__+"_plot.png")
 plt.show()
