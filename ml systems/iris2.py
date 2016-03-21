@@ -9,8 +9,8 @@ data = load_iris()
 # load_iris returns an object with several fields
 
 observations = []
-
-for e in range(0,5000):
+best_fit_data = []
+for e in range(0,5):
 	# print e
 	features = data.data
 	feature_names = data.feature_names
@@ -70,6 +70,11 @@ for e in range(0,5000):
 				best_t = t
 				best_reverse = reverse
 	result = []
+	best_f_data = [best_t,best_fi]
+	best_fit_data.append(best_f_data)
+	# print 'best_t',best_t
+	# print "best_acc",best_acc
+	# print "best_fi",best_fi
 	for f in test_features:
 		if f[2] < min_non_setosa:
 			result.append(0)
@@ -89,12 +94,13 @@ for e in range(0,5000):
 	answer =  np.array(result)
 	final_result = (answer == test_target)
 
-	print test_target
-	print answer
-	print final_result
-	print final_result.mean()
-	print " "
+	# print test_target
+	# print answer
+	# print final_result
+	# print final_result.mean()
+	# print " "
 	observations.append(final_result.mean()*100)
+
 
 observations = np.array(observations)
 # print observations.max()
@@ -104,3 +110,13 @@ observations = np.array(observations)
 # print('Maximum accuracy: {0}.'.format(observations.max()))
 # print('Minimum accuracy: {0}.'.format(observations.min()))
 # print('Mean accuracy: {0}.'.format(observations.mean()))
+best_fit_data = np.array(best_fit_data)
+print best_fit_data
+# print best_fit_data[0,1]
+# print best_fit_data[1,0]
+# print best_fit_data[1,1]
+plt.scatter(best_fit_data[0,], best_fit_data[1,], marker='x', c='g')
+plt.xlabel('best_t')
+plt.ylabel('best_fi')
+# plt.savefig(__main__.__file__+"_plot.png")
+plt.show()

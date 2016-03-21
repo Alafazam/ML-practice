@@ -2,7 +2,6 @@ import __main__
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
-import numpy as np
 
 # We load the data with load_iris from sklearn
 from sklearn.datasets import load_iris
