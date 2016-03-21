@@ -97,10 +97,10 @@ for e in range(0,5000):
 	observations.append(final_result.mean()*100)
 
 observations = np.array(observations)
-print observations.max()
-print observations.min()
-print observations.mean()
+# print observations.max()
+# print observations.min()
+# print observations.mean()
 
-print('Maximum accuracy: {0}.'.format(observations.max()))
-print('Minimum accuracy: {0}.'.format(observations.min()))
-print('Mean accuracy: {0}.'.format(observations.mean()))
+# print('Maximum accuracy: {0}.'.format(observations.max()))
+# print('Minimum accuracy: {0}.'.format(observations.min()))
+# print('Mean accuracy: {0}.'.format(observations.mean()))
