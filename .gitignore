@@ -64,3 +64,7 @@ target/
 
 # data set
 dataset/
+
+#sublime
+.sublime-workspace
+.sublime-project
