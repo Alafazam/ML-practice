@@ -53,8 +53,9 @@ class crawler:
   # Create the database tables
   def crawl(self,pages,depth=2):
     for i in range(depth):
-      newpages={}
+      newpages=[]
       for page in pages:
+        # print "going for %s" % page
         try:
           c=urllib2.urlopen(page)
         except:
@@ -66,13 +67,16 @@ class crawler:
 
           links=soup('a')
           for link in links:
+            # print 'processing link %s' % link
+
             if ('href' in dict(link.attrs)):
-              print 'processing linl %s' % link
               url=urljoin(page,link['href'])
               if url.find("'")!=-1: continue
+
               url=url.split('#')[0]  # remove location portion
               if url[0:4]=='http' and not self.isindexed(url):
-                newpages[url]=1
+                newpages.append(url)
+
               linkText=self.gettextonly(link)
               self.addlinkref(page,url,linkText)
 
@@ -81,5 +85,6 @@ class crawler:
           print "Could not parse page %s" % page
 
       pages=newpages
+      if(len(pages)>10): pages = pages[0:10]
 
 
