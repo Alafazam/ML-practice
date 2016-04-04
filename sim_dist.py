@@ -163,17 +163,14 @@ def getRecommendedItems(prefs,itemMatch,user):
 
 
 def loadMovieLens(path='/dataset/ml-100k'):
-
 	# Get movie titles
 	movies={}
-
 	for line in open(_basedir + path+'/u.item'):
 		(id,title)=line.split('|')[0:2]
 		movies[id]=title
 
 	# Load data
 	prefs={}
-
 	for line in open(_basedir + path+'/u.data'):
 		(user,movieid,rating,ts)=line.split('\t')
 		prefs.setdefault(user,{})
