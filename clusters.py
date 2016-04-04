@@ -23,7 +23,7 @@ def hcluster(rows,distance=pearson):
 	currentclustid=-1
 	# Clusters are initially just the rows
 	clust=[bicluster(rows[i],id=i) for i in range(len(rows))]
-	
+
 	while len(clust)>1:
 		lowestpair=(0,1)
 		closest=distance(clust[0].vec,clust[1].vec)
@@ -33,13 +33,13 @@ def hcluster(rows,distance=pearson):
 			# distances is the cache of distance calculations
 				if (clust[i].id,clust[j].id) not in distances:
 					distances[(clust[i].id,clust[j].id)]=distance(clust[i].vec,clust[j].vec)
-					
+
 				d=distances[(clust[i].id,clust[j].id)]
-				
+
 				if d<closest:
 					closest=d
 					lowestpair=(i,j)
-		
+
 		minL = min(len(clust[lowestpair[0]].vec),len(clust[lowestpair[1]].vec))
 		# calculate the average of the two clusters
 		mergevec=[(clust[lowestpair[0]].vec[i] + clust[lowestpair[1]].vec[i])/2.0 for i in range(minL)]
@@ -178,7 +178,7 @@ def kcluster(rows,distance=pearson,k=4):
 				if d < distance(clusters[bestmatch],row): bestmatch = i
 			bestmatches[bestmatch].append(j)
 			# If the results are the same as last time, this is complete
-		if bestmatches == lastmatches: break			
+		if bestmatches == lastmatches: break
 		lastmatches = bestmatches
 		#Move the centroids to the average of their members
 		for i in range(k):

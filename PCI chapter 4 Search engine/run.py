@@ -1,9 +1,11 @@
 import os
 import searchengine
+
 pagelist=['https://en.wikipedia.org/wiki/Python']
+
 crawler=searchengine.crawler('searchindex.db')
-crawler.createindextables( )
-# crawler.crawl(pagelist)
+# crawler.createindextables( )
+crawler.crawl(pagelist)
 
 # DIR = 'toy'
 
@@ -12,3 +14,7 @@ crawler.createindextables( )
 
 # print posts
 
+
+# crawler=searchengine.crawler('searchindex.db')
+# pages= ['http://kiwitobes.com/wiki/Categorical_list_of_programming_languages.html']
+# crawler.crawl(pages)

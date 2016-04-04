@@ -33,12 +33,30 @@ class crawler:
   # Auxilliary function for getting an entry id and adding
   # it if it's not present
   def getentryid(self,table,field,value,createnew=True):
-    return None
+    cur=self.con.execute("select rowid from %s where %s='%s'" % (table,field,value))
+    res=cur.fetchone()
+    if res==None:
+      cur=self.con.execute("insert into %s (%s) values ('%s')" % (table,field,value))
+      return cur.lastrowid
+    else:
+      return res[0]
 
   # Index an individual page
   def addtoindex(self,url,soup):
-    print 'Indexing %s' % url
-    self.listOfUrls.append(url)
+    if self.isindexed(url): return
+    print 'Indexing '+url
+    # Get the individual words
+    text=self.gettextonly(soup)
+    words=self.separatewords(text)
+    # Get the URL id
+    urlid=self.getentryid('urllist','url',url)
+    # Link each word to this url
+    for i in range(len(words)):
+      word=words[i]
+      if word in ignorewords: continue
+      wordid=self.getentryid('wordlist','word',word)
+      self.con.execute("insert into wordlocation(urlid,wordid,location) values (%d,%d,%d)" % (urlid,wordid,i))
+
 
   # Extract the text from an HTML page (no tags)
   def gettextonly(self,soup):
@@ -56,12 +74,17 @@ class crawler:
 
   # Separate the words by any non-whitespace character
   def separatewords(self,text):
-    return None
+    splitter=re.compile('\\W*')
+    return [s.lower( ) for s in splitter.split(text) if s!='']
 
   # Return true if this url is already indexed
   def isindexed(self,url):
-    return url in self.listOfUrls
-    # return False
+    u=self.con.execute("select rowid from urllist where url='%s'" % url).fetchone()
+    if u!=None:
+      # Check if it has actually been crawled
+      v=self.con.execute('select * from wordlocation where urlid=%d' % u[0]).fetchone()
+      if v!=None: return True
+      return False
 
   # Add a link between two pages
   def addlinkref(self,urlFrom,urlTo,linkText):
